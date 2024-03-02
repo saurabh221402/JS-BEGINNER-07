@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js07.css">
+    <title>Generating QR using api </title>
+</head>
+<body>
+    <div class="box">
+        <input type="text" id="qrlink" placeholder="Enter URL"  >
+        <div class="imgbox">
+            <img id="qrimage" alt="no internet" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=google">
+        </div>
+        <button id="generater" onclick="generateQR()">Generate QR</button>
+    </div>
+
+    <script>
+        let qrtext= document.getElementById("qrlink");
+        let qrimage = document.getElementById("qrimage");
+        
+        function generateQR(){
+            if(qrtext.value=="")
+            {
+                alert("enter url or name");
+            }
+            else{
+            qrimage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+ qrtext.value;
+            console.log(qrimage);
+            }
+        }
+    </script>
+</body>
+</html>

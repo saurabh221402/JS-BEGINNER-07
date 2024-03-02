@@ -1,0 +1,33 @@
+*
+{
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #432;
+}
+.box
+{
+    position: absolute;
+    width: 40%;
+    padding-left: 30px;
+    min-width: 500px;
+    height: 50vh;
+    min-height: 500px;
+    left: 50%;
+    top: 50%;
+    background-color: aliceblue;
+    transform: translate(-50%,-50%);
+}
+input{
+    width: 60%;
+    list-style: none;
+    font-size: medium;
+}
+.imgbox
+{
+    
+    min-width: 300px; 
+    min-height: 300px;
+}
