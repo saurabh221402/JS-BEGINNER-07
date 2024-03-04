@@ -10,26 +10,15 @@
     <div class="box">
         <h2 align="center"><u>Generate QR </u><abbr title="convert text to qr">*</abbr></h2><br>
         <input type="text" id="qrlink" placeholder="Enter URL"  >
-        <div class="imgbox">
+        <div id="imgbox">
             <img id="qrimage" alt="no internet" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=google">
         </div>
         <button id="generater" onclick="generateQR()">Generate QR</button>
+        <br>
+        <button id="ss"><abbr title="download button not working then press and hold on qr code to inbuilt download option">Download</abbr></button>
     </div>
-
-    <script>
-        let qrtext= document.getElementById("qrlink");
-        let qrimage = document.getElementById("qrimage");
-        
-        function generateQR(){
-            if(qrtext.value=="")
-            {
-                alert("enter url or name");
-            }
-            else{
-            qrimage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+ qrtext.value;
-            console.log(qrimage);
-            }
-        }
-    </script>
+    <script src="js07.js"></script>
+    <script src="html2canvas.js"></script>
+    
 </body>
 </html>
